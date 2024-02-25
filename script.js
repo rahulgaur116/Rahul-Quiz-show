@@ -7,7 +7,7 @@
         var resultEl = document.querySelector("#result");
         var timerEl = document.querySelector("#timer");
         var scoreEl = document.querySelector("#score");;
-        var timer = 120;
+        var timer = 45;
         var score = 0;
         var question = [
             {
@@ -31,12 +31,27 @@
                 answer: "Bugs Bunny",
             },
             {
-                question: "How many Harry Potter movies are there?",
-                choices: ["1", "2", "3", "8"],
-                answer: "8",
+                question: "Who wrote the play Hamlet",
+                choices: ["Shakespeare", "bunny", "Bernard", "Wilde"],
+                answer: "Shakespeare",
             },
-            
+            {
+                question: "Which city is known as the City of Love",
+                choices: ["London", "Paris", "France", "Dubling"],
+                answer: "Paris",
+            },
+            {
+                question: "Which City is Brooklyn Bridge in",
+                choices: ["London", "Paris", "New York", "Dubling"],
+                answer: "New York",
+            },
+            {
+                question: "Which country is Great Wall of China in",
+                choices: ["UK", "China", "India", "Nepal"],
+                answer: "China",
+            },
         ];
+    
         var questionIndex = 0;
 
         function startTimer() {
@@ -82,27 +97,26 @@
             questions.setAttribute("class", "hide");
             resultEl.textContent = "Game Over";
             timerEl.setAttribute("class", "hide");
+        
         }
-
+        
         choicesEl.addEventListener("click", function (event) {
             var target = event.target;
-            
+        
             if (target.matches("li")) {
-                
                 if (target.textContent === question[questionIndex].answer) {
                     resultEl.textContent = "Correct";
                     score++;
                     scoreEl.textContent = score;
-
                 } else {
                     resultEl.textContent = "Incorrect";
                     timer = timer - 2;
                 }
-
+        
                 questionIndex++;
                 setTimeout(updateQuestion, 1500);
             }
         });
-
+        
         startGameEl.addEventListener("click", startGame);
     
