@@ -39,8 +39,12 @@ The game ends when all questions are answered or the timer reaches 0.
 
 
 Screenshots
+![alt text](Assets/Home.jpg) 
 
-Include any relevant screenshots of the project in action.
+<video controls src="Assets/Incorrect Correct.mp4" title="alt text"></video>
+
+ ![alt text](Assets/Question.png)
+
 
 
 Credits
