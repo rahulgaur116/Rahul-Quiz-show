@@ -1,7 +1,5 @@
 # Rahul-Quiz-show
 
-
-
 Quiz Game
 
 Description
@@ -13,13 +11,10 @@ Technologies Used
 
 
 HTML
-
 JavaScript
-
+CSS
 
 Installation
-
-
 Clone the repository.
 
 Open the index.html file in a web browser.
@@ -29,7 +24,6 @@ Usage
 
 
 Click the "Start Game" button to begin the quiz.
-
 
 Answer the multiple-choice questions displayed.
 
@@ -52,13 +46,4 @@ Credits
 
 Developer: [Rahul Sharma ]
 
-Email: [Your Email]
-
-
-License
-
-This project is licensed under the [License Name] License - see the LICENSE.md file for details.
-
-
-
-You can customize this template further by adding more specific details about the project or any additional features. Let me know if you need any more help with the README file!
+Email: [rahulgaur116@gmail.com]
