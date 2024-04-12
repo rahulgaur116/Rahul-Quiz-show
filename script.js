@@ -9,6 +9,7 @@
         var scoreEl = document.querySelector("#score");;
         var timer = 45;
         var score = 0;
+    
         var question = [
             {
                 question: "How many continents are there in th world?",
@@ -53,6 +54,7 @@
         ];
     
         var questionIndex = 0;
+        var score = localStorage.getItem('score') || 0;
 
         function startTimer() {
             setInterval(function () {
@@ -75,6 +77,16 @@
             startTimer();
             scoreEl.textContent = score;
         }
+ // Update the score in the HTML element and store it in local storage
+            scoreEl.textContent = score;
+            localStorage.setItem('score', score);
+
+    // Function to update the score and store it in local storage
+          function updateScore(newScore) {
+            score = newScore;
+            scoreEl.textContent = score;
+            localStorage.setItem('score', score);}
+
 
         function updateQuestion() {
             if (questionIndex === question.length) {
@@ -97,7 +109,10 @@
             questions.setAttribute("class", "hide");
             resultEl.textContent = "Game Over";
             timerEl.setAttribute("class", "hide");
-        
+             // Reset the score and update it in local storage
+            score = 0;
+            localStorage.setItem('score', score);
+            
         }
         
         choicesEl.addEventListener("click", function (event) {
